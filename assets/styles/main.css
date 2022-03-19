@@ -1,0 +1,65 @@
+
+
+/* Add Border Box to all elements */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Visualize every element with a white box - debugging */
+/* * {
+    outline: 1px solid whitesmoke !important;
+  } */
+
+:root {
+    --grid-columns: 1;
+    --grid-rows: 1;
+}
+
+body {
+    padding: 0 2em 2em 2em;
+}
+
+header {
+    display: grid;
+    justify-items: center;
+}
+
+header h1 {
+    font-family: 'Sniglet', cursive;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    grid-template-rows: repeat((var(--grid-rows)), 1fr);
+    justify-items: stretch;
+    border-style: inset;
+    border-width: 3em;
+    border-color: red;
+    /* gap: 1em; */
+    /* padding: 2em; */
+    /* border: 1em solid red; */
+
+}
+
+.grid-item {
+    padding: 1em;
+    border: 0.25em solid lightskyblue;
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    justify-items: center;
+}
+
+/* div {
+    width: 2em;
+    height: 2em;
+    background-color: yellow;
+    border: thick double #32a1ce;
+} */
