@@ -1,13 +1,13 @@
 
 
 /* Add Border Box to all elements */
-html {
+/* html {
     box-sizing: border-box;
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
-}
+} */
 
 /* Visualize every element with a white box - debugging */
 /* * {
@@ -15,44 +15,63 @@ html {
   } */
 
 :root {
-    --grid-columns: 1;
-    --grid-rows: 1;
+    --grid-columns: 16;
+    --grid-rows: 16;
 }
 
 body {
-    padding: 0 2em 2em 2em;
+    padding: 0;
+    margin: 0;
 }
 
-header {
+.header {
     display: grid;
     justify-items: center;
+    background-color: lightgrey;
 }
 
-header h1 {
-    font-family: 'Sniglet', cursive;
+.header h1 {
+    font-family: 'Gruppo', cursive;
+    margin: 0.5em 0;
+}
+
+.reset-container {
+    display: grid;
+    justify-content: center;
+}
+
+#reset {
+    margin: 1em 0 0 0;
+    padding: 0.75em;
+    font-size: 1.5em;
+    border-radius: 1em;
+    /* font-family: 'Gruppo', cursive; */
 }
 
 #grid-container {
     display: grid;
+    margin: 2em;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
     grid-template-rows: repeat((var(--grid-rows)), 1fr);
+    /* justify-items: center; */
     justify-items: stretch;
     border-style: inset;
     border-width: 3em;
     border-color: red;
+    border-radius: 2em;
     /* gap: 1em; */
-    /* padding: 2em; */
     /* border: 1em solid red; */
-
 }
 
 .grid-item {
-    padding: 1em;
-    border: 0.25em solid lightskyblue;
-    text-align: center;
+    padding-bottom: 100%;
+    /* padding: 1em; */
+    /* border: 0.25em solid lightskyblue; */
 }
 
-footer {
+.footer {
+    font-family: 'Gruppo', cursive;
+    background-color: lightgrey;
     display: grid;
     justify-items: center;
 }
