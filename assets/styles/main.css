@@ -50,9 +50,9 @@ body {
 
 #grid-container {
     display: grid;
-    margin: 2em;
+    margin: 3em;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    grid-template-rows: repeat((var(--grid-rows)), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
     /* justify-items: center; */
     justify-items: stretch;
     border-style: inset;
